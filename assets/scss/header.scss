@@ -1,0 +1,127 @@
+.lateral{
+    position: fixed;
+    left: -100vw;
+    top: 0px;
+    width: 300px;
+    height: 100vh;
+    background-color: $white;
+    padding: 40px;
+    z-index: 31;
+    transition: all .3s;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    @media screen and (max-width: 600px) {
+        width: 100vw;
+    }
+    &.larger{
+        width: 400px;
+    }
+    &.active{
+        left: 0px;
+        @media screen and (max-width: 1100px) {
+            box-shadow: 0 0 0 100vw #00000090;
+        }
+    }
+    &.right{
+        left: auto;
+        right: -100vw;
+        &.active{
+            right: 0px;
+        }
+    }
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-bottom: 40px;
+        gap: 14px;
+        width: 100%;
+        >div{
+            width: 52px;
+            height: 52px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            border-radius: 12px;
+            transition: all .3s;
+            background-color: $primary-color;
+            border: 2px solid $primary-color;
+            color: $secondary-color;
+            font-size: 32px;
+            cursor: pointer;
+            &:hover{
+                background-color: $secondary-color;
+                color: $primary-color;
+            }
+        }
+    }
+    ul{
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        li{
+            width: 100%;
+            color: $black;
+            font-family: "Poppins";
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 140%; 
+            a{
+                cursor: pointer;
+                color: $black;
+                font-family: "Poppins";
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 140%; 
+                transition: all .3s;
+                width: 100%;
+                padding: 0;
+                position: relative;
+                text-decoration: none;
+                &::after{
+                    content: "";
+                    width: 0;
+                    height: 2px;
+                    background-color: $primary-color;
+                    transition: all .3s;
+                    position: absolute;
+                    left: 0;
+                    top: auto;
+                    bottom: 0;
+                }
+                &:hover, &.active{
+                    color: $primary-color;
+                    &::after{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+.menu-icon{
+    width: 50px;
+    height: 50px;
+    left: 30px;
+    top: 30px;
+    position: fixed;
+    font-size: 30px;
+    color: $white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 31;
+    cursor: pointer;
+    transition: all .3s;
+    &:hover{
+        color: $black;
+        background-color: $white;
+    }
+    &.right{
+        left: auto;
+        right: 30px
+    }
+}

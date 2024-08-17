@@ -1,0 +1,614 @@
+.initial-page{
+    background-color: $black;
+    min-height: 100vh;
+    width: 99vw;
+    overflow: hidden;
+    transition: all .3s;
+    &.recuo{
+        padding-left: 350px;
+        width: calc(99vw);
+        &.right{
+            padding-left: 0;
+            padding-right: 350px;
+            @media screen and (max-width: 1100px) {
+                padding-right: 0;
+            }
+        }
+        @media screen and (max-width: 1100px) {
+            padding-left: 0;
+            width: 100vw;
+        }
+    }
+}
+html{
+    background-color: $black;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: $black!important;
+    color: $grey;
+}
+.bg-dark-gray {
+    background-color: #2c2c2c;
+}
+.link-light-gray {
+    color: #b0b0b0;
+}
+.link-light-gray:hover {
+    color: $white;
+}
+.text-gray, .content, p{
+    color: $grey;
+}
+.text-dark-gray {
+    color: #b0b0b0;
+}
+.top{
+    width: 100%;
+    color: $white;
+    padding: 50px 0px;
+    display: flex;
+    align-items: center;
+    cursor: default;
+    @media screen and (max-width: 768px) {
+        padding-top: 70px;
+    }
+    .container{
+        min-height: 80vh;
+        @media screen and (max-width: 768px) {
+            min-height: 50vh;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .left, .right, .name{
+            font-family: "Inconsolata";
+            font-size: 10vw;
+            text-transform: uppercase;
+            font-weight: 700;
+            line-height: 8vw;
+            transition: all .3s;
+            color: $primary-color;
+            width: fit-content;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        .right, .name{
+            margin-left: auto;
+            text-align: right;
+        }
+        .name{
+            padding-top: 40px;
+            color: $white;
+            font-size: 8vw;
+        }
+        .center{
+            h2{
+                padding-bottom: 12px;
+            }
+            .swiper-tecnologias{
+                a{
+                    display: block;
+                    width: 48px;
+                    height: 48px;
+                    background-color: rgb(36, 41, 56);
+                    border-radius: 12px;
+                    &.pad{
+                        padding: 8px;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+}
+.sobre-mim{
+    padding: 40px 0px;
+    font-family: "Poppins";
+    color: $white;
+    .container{
+        h2{
+            font-family: "Inconsolata";
+            font-size: 48px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: $primary-color;
+        }
+        .left-right{
+            padding: 40px 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            .left, .right{
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                }
+                width: calc(50% - 30px);
+            }
+            .right{
+                max-width: 400px;
+            }
+        }
+    }
+}
+.nontext{
+    text-transform: none!important;
+}
+.linha-do-tempo{
+    margin: 0px auto;
+    max-width: 900px;
+}
+.timeline {
+    margin: 20px auto;
+    padding: 20px;
+}
+.card-time{
+    position: relative;
+    .info{
+        display: flex;
+        justify-content: left;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 4%;
+        padding: 30px;
+        .title{
+            width: 100%;
+            @media screen and (max-width: 600px) {
+                font-size: 28px;
+            }  
+            @media screen and (max-width: 400px) {
+                font-size: 24px;
+            }  
+        }
+        .text, .slide{
+            width: calc(48%);    
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }  
+            @media screen and (max-width: 400px) {
+                font-size: 18px;
+            }  
+        }
+        img{
+            width: 100%;
+            aspect-ratio: 1;
+        }
+    }
+    &:nth-child(odd) {
+        padding: 30px 0 30px 30px;
+        &::before {
+            left: 0px;
+            top: -5px;
+            bottom: -5px;
+            border-width: 5px 0 5px 5px;
+            border-radius: 50px 0 0 50px;
+        }
+
+        @media only screen and (max-width: 400px) {
+            &::before {
+                top: -5px;
+                bottom: -5px;
+            }
+        }
+    }
+
+    &:nth-child(even) {
+        padding: 30px 30px 30px 0;
+
+        &::before {
+            right: 0;
+            top: 0;
+            bottom: 0;
+            border-width: 5px 5px 5px 0;
+            border-radius: 0 50px 50px 0;
+        }
+
+        > .info > .title {
+        text-align: right;
+
+            &::before {
+                left: auto;
+                right: -65px;
+            }
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 50%;
+        border: solid $secondary-color;
+    }
+
+    &:first-child::before {
+        border-top: 0;
+        border-top-left-radius: 0;
+    }
+    &:last-child {
+        &:nth-child(odd)::before {
+            border-bottom: 0;
+            border-bottom-left-radius: 0;
+        }
+        &:nth-child(even)::before {
+            border-bottom: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    background: $secondary-color;
+    color: gray;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    @media screen and (max-width: 768px) {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}
+.title {
+    color: $primary-color;
+    position: relative;
+    font-size: 38px;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background: white;
+        top: 8px;
+        border-radius: 999px;
+        border: 3px solid $secondary-color;
+        left: -65px;
+    }
+    .card:nth-child(odd) &::before {    
+        right: -65px;
+    }
+}
+.projetos{
+    padding: 80px 0px;
+    .container{
+        width: 1100px;
+        position: relative;
+        @media screen and (max-width: 1100px) {
+            padding: 0px 70px;
+            width: 100%;
+            max-width: 100%!important;
+        }
+        @media screen and (max-width: 500px) {
+            padding: 0px 20px;
+        }
+        h2{
+            width: 100%;
+            font-family: "Inconsolata";
+            font-size: 48px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: $primary-color;
+        }
+    }
+    .swiper-projetos{
+        overflow: visible;
+        .swiper-button-next,
+        .swiper-button-prev{
+            color: $primary-color;
+        }
+        .swiper-button-prev{
+            transform: translateX(-48px);
+            @media screen and (max-width: 1100px) {
+                transform: none;
+            }  
+        }
+        .swiper-button-next{
+            transform: translateX(48px);
+            @media screen and (max-width: 1100px) {
+                transform: none;
+            }  
+        }
+        .swiper-slide{
+            transition: all .3s;
+            &.swiper-slide-active{
+                .project{
+                    margin: 0px;
+                    margin-bottom: 100px;
+                }
+            }
+            .project{
+                transition: all .3s;
+                margin: 50px;
+                padding: 30px;
+                @media screen and (max-width: 1100px) {
+                    margin: 0px;
+                    margin-top: 100px;
+                }
+                @media screen and (max-width: 768px) {
+                    min-height: 800px;
+                }
+                @media screen and (max-width: 600px) {
+                    min-height: 900px;
+                }
+                border-radius: 18px;
+                background-color: $secondary-color;
+                color: $white;
+                .img-container{
+                    max-height: 400px;
+                    overflow-x: hidden;
+                    overflow-y: scroll;
+                    @media screen and (max-width: 600px) {
+                        overflow-x: scroll;
+                    }
+                    &::-webkit-scrollbar {
+                        transition: all .3s;
+                        width: 12px; /* Largura da barra de rolagem */
+                        height: 12px; /* Altura da barra de rolagem (para rolagem horizontal) */
+                    }
+                    &::-webkit-scrollbar-track {
+                        background: #888!important; 
+                        border-radius: 10px!important;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        background: $primary-color!important; 
+                        border-radius: 10px!important;
+                    }
+                    &::-webkit-scrollbar-thumb:active {
+                        background: $primary-color!important; 
+                    }
+                    &::-webkit-scrollbar-thumb:hover {
+                        background: $primary-color!important; 
+                    }
+                    &::-webkit-scrollbar-corner {
+                        background: #888!important; 
+                    }
+                    img{
+                        transition: all .3s;
+                        width: 100%;
+                        @media screen and (max-width: 600px) {
+                            min-width: 700px;
+                            object-position: top center;
+                        }
+                    }
+                }
+                .description{
+                    padding-top: 20px;
+                    display: flex;
+                    gap: 32px;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    padding: 20px 0px;
+                    @media screen and (max-width: 1100px) {
+                        flex-wrap: wrap;
+                    }
+                    .contain{
+                        width: fit-content;
+                        display: flex;
+                        gap: 16px;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        min-width: 275px;
+                    }
+                    a{
+                        padding: 8px 32px;
+                        border-radius: 12px;
+                        font-family: "Inconsolata";
+                        font-weight: 600;
+                        font-size: 24px;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        text-align: center;
+                        border: 1px solid $primary-color;
+                        background-color: $primary-color;
+                        color: $black;
+                        transition: all .3s;
+                        &:hover{
+                            color: $primary-color;
+                            background-color: $secondary-color;
+                        }
+                    }
+                    .left{
+                        font-family: "Poppins";
+                        color: $white;
+                        max-width: calc(100% - 232px);
+                        @media screen and (max-width: 1100px) {
+                            max-width: 100%;
+                        }
+                        h2{
+                            font-family: "Inconsolata";
+                            font-size: 48px;
+                            line-height: 48px;
+                            text-transform: uppercase;
+                            font-weight: 700;
+                            color: $primary-color;
+                            @media screen and (max-width: 700px) {
+                                font-size: 32px;
+                            }
+                        }
+                        b{
+                            color: $danger;
+                        }
+                    }
+                    .tecnologias{
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 16px;
+                        div.img{
+                            display: block;
+                            width: 48px;
+                            height: 48px;
+                            background-color: rgb(36, 41, 56);
+                            border-radius: 12px;
+                            &.pad{
+                                padding: 8px;
+                            }
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.certificados{
+    padding: 80px 0px;
+    .container{
+        width: 1000px;
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+        h2{
+            width: 100%;
+            font-family: "Inconsolata";
+            font-size: 48px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: $primary-color;
+        }
+        .item{
+            width: calc(50% - 16px);
+            @media screen and (max-width: 768px) {
+                width: 100%
+            }
+            background-color: $black;
+            border: 2px solid $secondary-color;
+            border-radius: 12px;
+            padding: 12px;
+            transition: all .3s;
+            font-family: "Poppins";
+            color: $white;
+            &:hover{
+                border-color: $primary-color;
+            }
+            a{
+                text-decoration: none;
+                color: $white;
+                font-family: "Poppins";
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 22px; 
+                transition: all .3s;
+                width: 100%;
+                padding: 0;
+                position: relative;
+                &::after{
+                    content: "";
+                    width: 0;
+                    height: 2px;
+                    background-color: $primary-color;
+                    transition: all .3s;
+                    position: absolute;
+                    left: 0;
+                    top: auto;
+                    bottom: -2px;
+                }
+                &:hover, &.active{
+                    color: $primary-color;
+                    &::after{
+                        width: 100%;
+                    }
+                }
+            }
+            div.description{
+                padding-top: 12px;
+            }
+        }
+    }
+}
+#color-modal{
+    width: fit-content;
+    padding: 30px;
+    max-width: 86vw;
+    border-radius: 12px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $secondary-color;
+    color: $white;
+    z-index: -999;
+    animation: .3s opacityAnRev;
+    border: 1px solid $white;
+    box-shadow: 0px 15px 0px 0px $white;
+    box-shadow: 2px 2px 6px 2px var(--white);
+    &.active{
+        animation: .3s opacityAn;
+        z-index: 9;
+    }
+    .buttons{
+        display: flex;
+        justify-content: right;
+        flex-wrap: wrap;
+        padding-bottom: 18px;
+        gap: 16px;
+        width: 100%;
+        >div{
+            width: 52px;
+            height: 52px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            border-radius: 12px;
+            transition: all .3s;
+            background-color: $primary-color;
+            border: 2px solid $primary-color;
+            color: $secondary-color;
+            font-size: 32px;
+            cursor: pointer;
+            &:hover{
+                background-color: $secondary-color;
+                color: $primary-color;
+            }
+        }
+    }
+    h2{
+        padding-bottom: 18px;
+    }
+    .input-colors{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 32px;
+        label{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 22px;
+            width: fit-content;
+            &:last-of-type{
+                width: 100%;
+            }
+        }
+    }
+}
+@keyframes opacityAn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+@keyframes opacityAnRev {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

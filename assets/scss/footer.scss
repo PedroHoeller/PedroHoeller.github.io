@@ -1,0 +1,100 @@
+/* Footer
+========================================================================== */
+.main-footer{
+    padding-top: 80px;
+    @media screen and (max-width: 768px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .container{
+        background-color: $secondary-color;
+        border-radius: 30px 30px 0px 0px;
+        padding: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+        align-items: center;
+        justify-content: space-between;   
+        color: $white;
+        @media screen and (max-width: 500px) {
+            justify-content: center;
+        }
+        h3{
+            font-family: "Inconsolata";
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .left{ 
+            font-family: "Inconsolata";
+            ul{
+                padding-left: 15px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            a{
+                color: $white;
+                text-decoration: none;
+                position: relative;
+                &::after{
+                    content: "";
+                    width: 0;
+                    height: 2px;
+                    background-color: $primary-color;
+                    transition: all .3s;
+                    position: absolute;
+                    left: 0;
+                    top: auto;
+                    bottom: 0;
+                }
+                &:hover, &.active{
+                    color: $primary-color;
+                    &::after{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .redes{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            width: calc(52px * 2 + 16px);
+            >a{
+                width: 52px;
+                height: 52px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                border-radius: 12px;
+                transition: all .3s;
+                background-color: $primary-color;
+                border: 2px solid $primary-color;
+                svg{
+                    object-fit: contain;
+                    width: 32px;
+                    height: 32px;
+                    fill:$secondary-color!important;
+                    stroke:$secondary-color!important;
+                    transition: all .3s;
+                    *{
+                        transition: all .3s;
+                        fill:$secondary-color!important;
+                        stroke:$secondary-color!important;
+                    }
+                }
+                &:hover{
+                    background-color: $secondary-color;
+                    svg{
+                        *{
+                            fill: $primary-color!important;
+                            stroke: $primary-color!important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
