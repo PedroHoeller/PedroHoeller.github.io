@@ -1,49 +1,739 @@
 <!DOCTYPE html>
-<html lang="en" class="demo-4">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<title>Site em Construção</title>
-		<meta name="description" content="use para seus sites em construção" />
-		<meta name="keywords" content="css-only, preloader, animations, css, css3, creative, custom, howto," />
-		<meta name="author" content="Mateus P. Ortiz - mateusortiz.com.br" />
-		<link rel="shortcut icon" href="../favicon.ico"> 
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<script src="js/modernizr.custom.63321.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=Acme' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="css/demo2.css" />
-        <link rel="stylesheet" type="text/css" href="css/default.css" />
-		<link href='http://fonts.googleapis.com/css?family=Alegreya+SC:700,400italic' rel='stylesheet' type='text/css' />
-		<!--[if lte IE 9]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
-	</head>
-	<body>
-		<div class="container">
-		
-			<!-- Codrops top bar -->
-			
-			<header>
-				<h1>Em <strong>Construção</strong></h1>
-				<div class="support-note">
-					<span class="note-ie">Sorry, only modern browsers.</span>
-				</div>
-				
-			</header>
-			
-			<section class="main">
-				<!-- the component -->
-				<div class="wrapper">
-					<div class="inner">
-						<span>L</span>
-						<span>o</span>
-						<span>a</span>
-						<span>d</span>
-						<span>i</span>
-						<span>n</span>
-						<span>g</span>
-					</div>
-				</div>
-			</section>
-		</div>
-	</body>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro-IFC</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" rel="stylesheet" />
+    <style>
+        body{
+            --p-color: orangered;
+            --s-color: #333;
+            --black: #141414;
+            --grey: #e0e0e0;
+            --white: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="pointer-background"></div>
+    <div class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="lateral">
+        <div class="container">
+            <div class="buttons">
+                <div title="Trocar Tema" class="change-color-item"><i class="fa-solid fa-droplet"></i></div>
+                <div title="Limpar Cores" class="reset-color-item"><i class="fa-solid fa-broom"></i></div>
+                <div title="Fechar menu" class="close-menu"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+            <ul>
+                <li>
+                    <a href="#top" class="nav-link active">Home</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#sobre-mim">Sobre mim</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#projetos">Projetos</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#certificados">Certificados</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+                <li>
+                    <a class="" id="open-color-modal">Quero me divertir!</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="initial-page">
+        <section class="top" id="top">
+            <div class="container">
+                <div class="left white" data-aos="fade-right" id="hover-text">DESENVOLVEDOR</div>
+                <div class="right" data-aos="fade-left">FULL-STACK</div>
+                <div class="center" data-aos="zoom-in">
+                    <h2>Especializações </h2>
+                    <div class="swiper-tecnologias">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./assets/images/php.svg" alt="PHP Logo">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./assets/images/laravel.svg" alt="Laravel Logo">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./assets/images/java.svg" alt="Java Logo">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="pad">
+                                    <img src="./assets/images/python.svg" alt="Python Logo">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./assets/images/js.svg" alt="JS Logo">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./assets/images/react.svg" alt="React Logo">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./assets/images/mysql.svg" alt="MySQL Logo">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./assets/images/postgre.svg" alt="Postgre Logo">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="pad">
+                                    <img src="./assets/images/git.svg" alt="Git Logo">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="pad">
+                                    <img src="./assets/images/docker.svg" alt="Docker Logo">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="pad">
+                                    <img src="./assets/images/wordpress.svg" alt="Wordpress Logo">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="pad">
+                                    <img src="./assets/images/sass.svg" alt="SASS Logo">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="name" data-aos="fade-left">Pedro Daniel</div>
+            </div>
+        </section>
+        <section class="sobre-mim" id="sobre-mim">
+            <div class="container">
+                <h2 data-aos="fade-up">Sobre mim</h2>
+                <div class="left-right">
+                    <div class="left" data-aos="fade-right">
+                        Olá! Eu sou Pedro Daniel, desenvolvedor web apaixonado por programação. Com 3 anos de ensino técnico em informática no Instituto Federal Catarinense, 2 anos de experiência profissional e 1 ano de experiência acadêmica no Bacharelado em Ciência da Computação, tenho dedicado minha carreira no desenvolvimento de aplicações robustas e escaláveis.
+                    </div>
+                    <div class="right" data-aos="fade-left">
+                        <img src="./assets/images/mysefl.webp" alt="Minha foto no escritório">
+                    </div>
+                </div>
+                <h2>Linha do tempo</h2>
+                <div class="linha-do-tempo">
+                    <div class="timeline">
+                        <div class="outer">
+                            <div class="card-time" >
+                                <div class="info" data-aos="fade-right">
+                                    <h3 class="title">Técnico em Informática <b>IFC</b><br>2019 - 2021</h3>
+                                    <div class="text">
+                                        <p>Entre 2019 e 2021, fui aluno do curso Técnico Profissionalizante no Instituto Federal Catarinense (IFC). Durante esse período, desenvolvi o TCC "Sistema Especialista em Correção do Solo para Safras de Soja", utilizando inteligência artificial para otimizar a produtividade agrícola. Além disso, participei da FETEC com o projeto "Mappoint", um aplicativo que apresenta preços de combustíveis de postos cadastrados, facilitando a busca por preços competitivos. Essas experiências foram essenciais para meu desenvolvimento profissional e técnico, preparando-me para os desafios do mercado de trabalho.</p>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="./assets/images/ifc-medio/2.jpeg" alt="Foto da turma">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="./assets/images/ifc-medio/1.jpeg" alt="Apresentação do TCC">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="./assets/images/ifc-medio/3.jpeg" alt="Fetec">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-time" >
+                                <div class="info" data-aos="fade-left">
+                                    <h3 class="title">Desenvolvedor Web na <b>Área Local</b><br>2022 - Presente</h3>
+                                    <div class="text">
+                                        <p>Desde 2022, atuo como desenvolvedor web na Área Local, especializando-me em WordPress, PHP, JavaScript, SASS, MySQL, Git, e outras tecnologias relacionadas. Minha experiência inclui a criação e manutenção de sites dinâmicos e responsivos, utilizando práticas modernas de desenvolvimento para proporcionar soluções eficientes e escaláveis aos projetos.</p>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="./assets/images/arealocal/3.webp" alt="Foto no escritório">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="./assets/images/arealocal/1.jpeg" alt="Primeiro mês na empresa">
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="./assets/images/arealocal/2.jpg" alt="Dia do Trabalhador">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-time" >
+                                <div class="info" data-aos="fade-right">
+                                    <h3 class="title">Estudante de Ciência da Computação <b>IFC</b><br>2022 - Presente</h3>
+                                    <div class="text">
+                                        <p>Durante o período como estudante de Ciência da Computação no IFC desde 2022, desenvolvi projetos significativos como o MultiDBManager, utilizando ORM MySQL em Java, e o JTaskPlanner, um framework Java para criação de crons e tarefas assíncronas. Além disso, escrevi artigos abordando temas como Algoritmos de Ordenação, Autômatos Celulares (implementações de von Neumann, Conway e Wolfram) e FPGA (Field-Programmable Gate Array).</p>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="#">
+                                                        <img src="./assets/images/ifc-medio/1.jpeg" alt="Apresentação do TCC">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="projetos" id="projetos">
+            <div class="container" data-aos="fade-up">
+                <h2>Meus Projetos</h2>
+                <div class="swiper-projetos">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="img-container">
+                                    <img src="./assets/images/projects/prochnow-2.webp" alt="Website Prochnow">
+                                </div>
+                                <div class="description">
+                                    <div class="left">
+                                        <h2>Website Prochnow</h2>
+                                        <p><b>Projeto realizado com Área Local</b></p>
+                                        <div class="tecnologias">
+                                            <div class="img">
+                                                <img src="./assets/images/php.svg" alt="PHP Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/js.svg" alt="JS Logo">
+                                            </div>
+                                            <div class="img pad">
+                                                <img src="./assets/images/sass.svg" alt="SASS Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/mysql.svg" alt="JS Logo">
+                                            </div>
+                                            <div class="img pad">
+                                                <img src="./assets/images/git.svg" alt="Git Logo">
+                                            </div>
+                                            <div class="img pad">
+                                                <img src="./assets/images/wordpress.svg" alt="Wordpress Logo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="https://prochnow.ind.br/servicos/" target="_blank">Ver projeto</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="img-container">
+                                    <img src="./assets/images/projects/imobvalle.webp" alt="Sistema Valle Imóveis">
+                                </div>
+                                <div class="description">
+                                    <div class="left">
+                                        <h2>Sistema Valle Imóveis</h2>
+                                        <p><b>Projeto realizado com Área Local</b></p>
+                                        <div class="tecnologias">
+                                            <div class="img">
+                                                <img src="./assets/images/php.svg" alt="PHP Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/laravel.svg" alt="Laravel Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/js.svg" alt="JS Logo">
+                                            </div>
+                                            <div class="img pad">
+                                                <img src="./assets/images/sass.svg" alt="SASS Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/mysql.svg" alt="MySQL Logo">
+                                            </div>
+                                            <div class="img pad">
+                                                <img src="./assets/images/git.svg" alt="Git Logo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="https://imobvalle.com.br" target="_blank">Ver projeto</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="img-container">
+                                    <img src="./assets/images/projects/multidbmanager.webp" alt="Framework Java para ORM">
+                                </div>
+                                <div class="description">
+                                    <div class="left">
+                                        <h2>Framework ORM Java</h2>
+                                        <p><b>Projeto De Faculdade</b></p>
+                                        <div class="tecnologias">
+                                            <div class="img">
+                                                <img src="./assets/images/java.svg" alt="Java Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/mysql.svg" alt="MySQL Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/postgre.svg" alt="Postgre Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/git.svg" alt="Git Logo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contain">
+                                        <a href="https://github.com/Pedro-IFC/MultiDBManager" target="_blank">Ver projeto</a>
+                                        <a href="./multidbmanager/" target="_blank">Ver Documentação</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="img-container">
+                                    <img src="./assets/images/projects/stack_automaton.webp" alt="Ferramenta para gerar e validar automatos">
+                                </div>
+                                <div class="description">
+                                    <div class="left">
+                                        <h2>Ferramenta para gerar e validar automatos de pilha determinísticos </h2>
+                                        <p><b>Projeto De Faculdade</b></p>
+                                        <div class="tecnologias">
+                                            <div class="img">
+                                                <img src="./assets/images/php.svg" alt="PHP Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/js.svg" alt="JavaScript Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/sass.svg" alt="SASS Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/git.svg" alt="Git Logo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="https://github.com/Pedro-IFC/stack_automaton" target="_blank">Ver projeto</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="img-container">
+                                    <img src="./assets/images/projects/jtaskplanner.webp" alt="Framework Agendador de Scripts Java">
+                                </div>
+                                <div class="description">
+                                    <div class="left">
+                                        <h2>Framework Agendador de Scripts Java</h2>
+                                        <p><b>Projeto De Faculdade</b></p>
+                                        <div class="tecnologias">
+                                            <div class="img">
+                                                <img src="./assets/images/java.svg" alt="Java Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/git.svg" alt="Git Logo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contain">
+                                        <a href="https://github.com/Pedro-IFC/JTaskPlanner" target="_blank">Ver projeto</a>
+                                        <a href="./jtaskplanner/" target="_blank">Ver Documentação</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="swiper-slide">
+                            <div class="project">
+                                <div class="img-container">
+                                    <img src="./assets/images/projects/clubedetiro.webp" alt="Sistema clube de tiro">
+                                </div>
+                                <div class="description">
+                                    <div class="left">
+                                        <h2>Sistema Clube de Tiro</h2>
+                                        <p><b>Projeto realizado com Área Local</b></p>
+                                            <div class="tecnologias">
+                                            <div class="img">
+                                                <img src="./assets/images/php.svg" alt="PHP Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/laravel.svg" alt="Laravel Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/js.svg" alt="JS Logo">
+                                            </div>
+                                            <div class="img pad">
+                                                <img src="./assets/images/sass.svg" alt="SASS Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/mysql.svg" alt="MySQL Logo">
+                                            </div>
+                                            <div class="img pad">
+                                                <img src="./assets/images/git.svg" alt="Git Logo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="https://clubedetirotaio.com.br" target="_blank">Ver projeto</a>
+                                </div>
+                            </div>
+                        </div>-->
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="img-container">
+                                    <img src="./assets/images/projects/tabelle.webp" alt="Website Tabelle">
+                                </div>
+                                <div class="description">
+                                    <div class="left">
+                                        <h2>Website Tabelle</h2>
+                                        <p><b>Projeto realizado com Área Local</b></p>
+                                        <div class="tecnologias">
+                                            <div class="img">
+                                                <img src="./assets/images/php.svg" alt="PHP Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/js.svg" alt="JS Logo">
+                                            </div>
+                                            <div class="img pad">
+                                                <img src="./assets/images/sass.svg" alt="SASS Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/mysql.svg" alt="MySQL Logo">
+                                            </div>
+                                            <div class="img pad">
+                                                <img src="./assets/images/git.svg" alt="Git Logo">
+                                            </div>
+                                            <div class="img pad">
+                                                <img src="./assets/images/wordpress.svg" alt="Wordpress Logo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="https://tabellemoveis.com.br" target="_blank">Ver projeto</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="img-container">
+                                    <img src="./assets/images/projects/wbreiktopf.webp" alt="Website W.Breiktopf">
+                                </div>
+                                <div class="description">
+                                    <div class="left">
+                                        <h2>Website W.Breiktopf</h2>
+                                        <p><b>Projeto realizado com Área Local</b></p>
+                                        <div class="tecnologias">
+                                            <div class="img">
+                                                <img src="./assets/images/php.svg" alt="PHP Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/js.svg" alt="JS Logo">
+                                            </div>
+                                            <div class="img pad">
+                                                <img src="./assets/images/sass.svg" alt="SASS Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/mysql.svg" alt="MySQL Logo">
+                                            </div>
+                                            <div class="img pad">
+                                                <img src="./assets/images/git.svg" alt="Git Logo">
+                                            </div>
+                                            <div class="img pad">
+                                                <img src="./assets/images/wordpress.svg" alt="Wordpress Logo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="https://wbreitkopf.com.br" target="_blank">Ver projeto</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="img-container">
+                                    <img src="./assets/images/projects/jproxy.webp" alt="API de busca de produtos SpringBoot Java">
+                                </div>
+                                <div class="description">
+                                    <div class="left">
+                                        <h2>API de busca de produtos com Proxy em Java com SpringBoot</h2>
+                                        <p><b>Projeto De Faculdade</b></p>
+                                        <div class="tecnologias">
+                                            <div class="img">
+                                                <img src="./assets/images/java.svg" alt="Java Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/mysql.svg" alt="MySQL Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/git.svg" alt="Git Logo">
+                                            </div>
+                                            <div class="img pad">
+                                                <img src="./assets/images/docker.svg" alt="Docker Logo">
+                                            </div>
+                                            <div class="img pad">
+                                                <img src="./assets/images/spring.svg" alt="SpringBoot Logo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="https://github.com/Pedro-IFC/JProxy" target="_blank">Ver projeto</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="img-container">
+                                    <img src="./assets/images/projects/bluemoon.webp" alt="Website Bluemoon">
+                                </div>
+                                <div class="description">
+                                    <div class="left">
+                                        <h2>Website Bluemoon</h2>
+                                        <p><b>Projeto realizado com Área Local</b></p>
+                                        <div class="tecnologias">
+                                            <div class="img">
+                                                <img src="./assets/images/php.svg" alt="PHP Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/js.svg" alt="JS Logo">
+                                            </div>
+                                            <div class="img pad">
+                                                <img src="./assets/images/sass.svg" alt="SASS Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/mysql.svg" alt="MySQL Logo">
+                                            </div>
+                                            <div class="img pad">
+                                                <img src="./assets/images/git.svg" alt="Git Logo">
+                                            </div>
+                                            <div class="img pad">
+                                                <img src="./assets/images/wordpress.svg" alt="Wordpress Logo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="https://bluemoonmotel.com.br/" target="_blank">Ver projeto</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="swiper-slide">
+                            <div class="project">
+                                <div class="img-container">
+                                    <img src="./assets/images/projects/ruy-barbosa.webp" alt="Website Ruy Barbosa">
+                                </div>
+                                <div class="description">
+                                    <div class="left">
+                                        <h2>Website Ruy Barbosa</h2>
+                                        <p><b>Projeto realizado com Área Local</b></p>
+                                        <div class="tecnologias">
+                                            <div class="img">
+                                                <img src="./assets/images/php.svg" alt="PHP Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/js.svg" alt="JS Logo">
+                                            </div>
+                                            <div class="img pad">
+                                                <img src="./assets/images/sass.svg" alt="SASS Logo">
+                                            </div>
+                                            <div class="img">
+                                                <img src="./assets/images/mysql.svg" alt="MySQL Logo">
+                                            </div>
+                                            <div class="img pad">
+                                                <img src="./assets/images/git.svg" alt="Git Logo">
+                                            </div>
+                                            <div class="img pad">
+                                                <img src="./assets/images/wordpress.svg" alt="Wordpress Logo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="https://csrb.com.br" target="_blank">Ver projeto</a>
+                                </div>
+                            </div>
+                        </div>-->
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+        <section class="certificados" id="certificados">
+            <div class="container">
+                <h2 data-aos="fade-up">Certificados</h2>
+                <div class="item" data-aos="fade-right">
+                    <a target="_blank" href="./assets/certificados/conclusao-curso.pdf">Conclusão do Técnico</a>
+                    <div class="description">
+                        Certificado de Conclusão de Curso, obtido após 3 anos de curso técnico voltado para desenvolvimento web
+                    </div>
+                </div>
+                <div class="item" data-aos="fade-left">
+                    <a target="_blank" href="./assets/certificados/dev_web_completo.pdf">Curso de Desenvolvimento web</a>
+                    <div class="description">
+                        Curso de Desenvolvimento Web Completo, com mais de 620 aulas e mais de 117 horas de aulas abordando tecnologias web como HTML5, CSS3, SASS, Bootstrap, JS, ES6, PHP, OO, MySQL, JQuery, MVC, APIs, IONI ...
+                    </div>
+                </div>
+                <div class="item" data-aos="fade-right">
+                    <a target="_blank" href="./assets/certificados/Docker.pdf">Curso de Docker</a>
+                    <div class="description">
+                        Curso de Docker abrangendo os fundamentos da containerização, incluindo a criação, gestão e orquestração de contêineres,  criação de imagens Docker, utilização de Docker Compose.
+                    </div>
+                </div>
+                <div class="item" data-aos="fade-left">
+                    <a target="_blank" href="./assets/certificados/IPM.pdf">Jovens Talentos IPM</a>
+                    <div class="description">
+                        Curso intensivo de desenvolvimento web feito pela IPM, onde foi nos ensinados os conceitos básicos da web, HTML, CSS, JS, PHP, PHP Orientado a Objeto e Postgre.
+                    </div>
+                </div>
+                <div class="item" data-aos="fade-right">
+                    <a target="_blank" href="./assets/certificados/scrip_zero.pdf">Google APP Script</a>
+                    <div class="description">
+                        Curso com o foco de  criar scripts personalizados, para manipular dados, para desenvolver complementos, para automatizar e para estender funcionalidades do Google Workspace, como Google Sheets e Gmail, utilizando JavaScript
+                    </div>
+                </div>
+                <div class="item" data-aos="fade-left">
+                    <a target="_blank" href="./assets/certificados/java.pdf">Curso JAVA</a>
+                    <div class="description">
+                        Um curso de Java focado em orientação a objetos e funcionamento da JVM e JDK ensina conceitos como classes, herança, polimorfismo e encapsulamento. Além disso, aborda a configuração do ambiente, execução de programas e gerenciamento de memória na JVM.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="color-modal">
+            <div class="buttons">
+                <div title="Limpar Cores" class="reset-color-item"><i class="fa-solid fa-broom"></i></div>
+                <div class="close-modal"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+            <h2>Troque cores a vontade!</h2>
+            <div class="input-colors">
+                <label>
+                    <input type="color" name="primaria" id="primaria">
+                    <span>Cor primária</span>
+                </label>
+                <label>
+                    <input type="color" name="secundaria" id="secundaria">
+                    <span>Cor secundária</span>
+                </label>
+                <label>
+                    <input type="color" name="preto" id="preto">
+                    <span>Tom de Preto</span>
+                </label>
+                <label>
+                    <input type="color" name="cinza" id="cinza">
+                    <span>Tom de Cinza</span>
+                </label>
+                <label>
+                    <input type="color" name="branco" id="branco">
+                    <span>Tom de Branco</span>
+                </label>
+            </div>
+        </section>
+        <footer class="main-footer" data-aos="fade-up" id="contato">
+            <div class="container">
+                <div class="left">
+                    <h3>Entre em contato!</h3>
+                    <ul>
+                        <li>
+                            <a target="_blank" href="mailto:pdanieldeoliveirahoeller@gmail.com">
+                                <i class="fa-regular fa-envelope"></i>
+                                <span>pdanieldeoliveirahoeller@gmail.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://wa.me/47989162853">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span>(47) 9 8916-2853</span>
+                            </a>     
+                        </li>              
+                    </ul>
+                </div>
+                <div class="right">
+                    <div class="redes">
+                        <a href="https://www.instagram.com/pedrodanielhoeller/" target="_blank">
+                            <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="42" height="42">
+                                <title>instagram-svg</title>
+                                <style>
+                                    .s0 { fill: #000000 } 
+                                </style>
+                                <g id="Layer">
+                                    <path id="Layer" class="s0" d="m24 9.8c-0.9 0-1.7-0.7-1.7-1.7 0-0.9 0.8-1.7 1.7-1.7 1 0 1.8 0.8 1.8 1.7 0 1-0.8 1.7-1.8 1.7z"/>
+                                    <path id="Layer" fill-rule="evenodd" class="s0" d="m16.3 23.2c-4.1 0-7.3-3.3-7.3-7.3 0-4 3.2-7.3 7.3-7.3 4 0 7.2 3.3 7.2 7.3 0 4-3.2 7.3-7.2 7.3zm4.7-7.3c0-2.6-2.1-4.7-4.7-4.7-2.6 0-4.7 2.1-4.7 4.7 0 2.6 2.1 4.7 4.7 4.7 2.6 0 4.7-2.1 4.7-4.7z"/>
+                                    <path id="Layer" fill-rule="evenodd" class="s0" d="m1.4 8.2c0-4 3.3-7.2 7.2-7.2h15.2c3.9 0 7.2 3.2 7.2 7.2v15c0 4-3.3 7.2-7.2 7.2h-15.2c-3.9 0-7.2-3.2-7.2-7.2zm2.8 14.8c0 2.7 2.2 5 5 5h14c2.8 0 5-2.3 5-5v-14.1c0-2.8-2.2-5-5-5h-14c-2.8 0-5 2.2-5 5z"/>
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/47989162853" target="_blank">
+                            <svg fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                                viewBox="0 0 308 308" xml:space="preserve">
+                            <g id="XMLID_468_">
+                                <path id="XMLID_469_" d="M227.904,176.981c-0.6-0.288-23.054-11.345-27.044-12.781c-1.629-0.585-3.374-1.156-5.23-1.156
+                                    c-3.032,0-5.579,1.511-7.563,4.479c-2.243,3.334-9.033,11.271-11.131,13.642c-0.274,0.313-0.648,0.687-0.872,0.687
+                                    c-0.201,0-3.676-1.431-4.728-1.888c-24.087-10.463-42.37-35.624-44.877-39.867c-0.358-0.61-0.373-0.887-0.376-0.887
+                                    c0.088-0.323,0.898-1.135,1.316-1.554c1.223-1.21,2.548-2.805,3.83-4.348c0.607-0.731,1.215-1.463,1.812-2.153
+                                    c1.86-2.164,2.688-3.844,3.648-5.79l0.503-1.011c2.344-4.657,0.342-8.587-0.305-9.856c-0.531-1.062-10.012-23.944-11.02-26.348
+                                    c-2.424-5.801-5.627-8.502-10.078-8.502c-0.413,0,0,0-1.732,0.073c-2.109,0.089-13.594,1.601-18.672,4.802
+                                    c-5.385,3.395-14.495,14.217-14.495,33.249c0,17.129,10.87,33.302,15.537,39.453c0.116,0.155,0.329,0.47,0.638,0.922
+                                    c17.873,26.102,40.154,45.446,62.741,54.469c21.745,8.686,32.042,9.69,37.896,9.69c0.001,0,0.001,0,0.001,0
+                                    c2.46,0,4.429-0.193,6.166-0.364l1.102-0.105c7.512-0.666,24.02-9.22,27.775-19.655c2.958-8.219,3.738-17.199,1.77-20.458
+                                    C233.168,179.508,230.845,178.393,227.904,176.981z"/>
+                                <path id="XMLID_470_" d="M156.734,0C73.318,0,5.454,67.354,5.454,150.143c0,26.777,7.166,52.988,20.741,75.928L0.212,302.716
+                                    c-0.484,1.429-0.124,3.009,0.933,4.085C1.908,307.58,2.943,308,4,308c0.405,0,0.813-0.061,1.211-0.188l79.92-25.396
+                                    c21.87,11.685,46.588,17.853,71.604,17.853C240.143,300.27,308,232.923,308,150.143C308,67.354,240.143,0,156.734,0z
+                                    M156.734,268.994c-23.539,0-46.338-6.797-65.936-19.657c-0.659-0.433-1.424-0.655-2.194-0.655c-0.407,0-0.815,0.062-1.212,0.188
+                                    l-40.035,12.726l12.924-38.129c0.418-1.234,0.209-2.595-0.561-3.647c-14.924-20.392-22.813-44.485-22.813-69.677
+                                    c0-65.543,53.754-118.867,119.826-118.867c66.064,0,119.812,53.324,119.812,118.867
+                                    C276.546,215.678,222.799,268.994,156.734,268.994z"/>
+                            </g>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/pedro-daniel-de-oliveira-hoeller-32b736188" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a href="https://github.com/Pedro-IFC" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./public/js/app.js"></script>
+</body>
 </html>
